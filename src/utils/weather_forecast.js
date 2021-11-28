@@ -11,8 +11,8 @@ const weather_forecast=(lattitude,longitude,callbacks)=>{
            callbacks({error:'Unable to find the location! Please provide valid location'},undefined)
        }
        else
-       {
-        callbacks(undefined,body.current.weather_descriptions[0]+'. it is currently '+body.current.temperature+' degrees out. It feels like '+body.current.feelslike+' degrees out.')
+       {console.log(body.current.humidity)
+        callbacks(undefined,body.current.weather_descriptions[0]+'. it is currently '+body.current.temperature+' degrees out. It feels like '+body.current.feelslike+' degrees out'+'and humidity is '+body.current.humidity+'%')
        }
     })
 
