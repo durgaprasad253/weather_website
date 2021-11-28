@@ -8,7 +8,7 @@ formSelector.addEventListener('submit',(e)=>{
     
     message_1Selector.textContent='Loading...'
     message_2Selector.textContent=''
-    fetch('http://localhost:3000/weather?address='+enteredLocation).then((response)=>{
+    fetch('/weather?address='+enteredLocation).then((response)=>{
     response.json().then((data)=>{
         
         if(data.error)

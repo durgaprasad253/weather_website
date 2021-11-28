@@ -4,6 +4,7 @@ const weather_forecast=require('./utils/weather_forecast')
 const hbs=require('hbs')
 const express =require('express')
 const app=express()
+const port = process.env.PORT || 3000
 
 //paths for the express configuration
 const publicDirectoryPath=path.join(__dirname,'../public')
@@ -87,6 +88,6 @@ app.get('*',(req,res)=>{
         message:'Page not found'
     })
 })
-app.listen(3000,()=>{
-    console.log('server is up and running!!!   on port 3000')
+app.listen(port,()=>{
+    console.log('server is up and running!!!   on port '+port)
 })
